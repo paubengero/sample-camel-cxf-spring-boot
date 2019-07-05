@@ -82,25 +82,42 @@
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-core</artifactId>
 		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.apache.camel</groupId>-->
+			<!--<artifactId>camel-cxf</artifactId>-->
+		<!--</dependency>-->
+
+		<!--<dependency>-->
+			<!--<groupId>org.apache.cxf</groupId>-->
+			<!--<artifactId>cxf-rt-ws-security</artifactId>-->
+		<!--</dependency>-->
+
 		<dependency>
 			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-cxf</artifactId>
+			<artifactId>camel-jaxb-starter</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf-starter</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-ws-security</artifactId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>${cxf-version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-rs-extension-providers</artifactId>
-			<version>${cxf-rt-rs-extension-providers.version}</version>
+			<version>${cxf-version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-transports-http-undertow</artifactId>
-			<version>3.3.2</version>
+			<version>${cxf-version}</version>
 		</dependency>
 
 	</dependencies>
