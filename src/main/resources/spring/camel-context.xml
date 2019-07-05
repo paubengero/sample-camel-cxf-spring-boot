@@ -6,12 +6,6 @@
 	<bean class="org.apache.cxf.interceptor.LoggingInInterceptor" id="logIn" />
 	<bean class="org.apache.cxf.interceptor.LoggingOutInterceptor" id="logOut" />
 
-	<!--<import resource="classpath:META-INF/cxf/cxf.xml"/>-->
-	<!--<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>-->
-
-	<!--<bean-->
-			<!--class="com.paulo.practice.application.samplecamelcxfspringboot.OrderRoute" id="order_route"/>-->
-
 	<cxf:rsServer
 			address="http://localhost:8080" id="cxfEndpoint"
 			serviceClass="com.paulo.practice.application.samplecamelcxfspringboot.RestOrderService">
@@ -25,19 +19,4 @@
 			<ref bean="logOut" />
 		</cxf:outInterceptors>
 	</cxf:rsServer>
-	<!--<camelContext allowUseOriginalMessage="true" id="camelContext"-->
-		<!--xmlns="http://camel.apache.org/schema/spring">-->
-		<!--<propertyPlaceholder id="properties"-->
-			<!--location="classpath:application.properties" />-->
-		<!--&lt;!&ndash;<camel:packageScan>&ndash;&gt;-->
-			<!--&lt;!&ndash;<camel:package>au.edu.adelaide.integration.application.cxforderservice</camel:package>&ndash;&gt;-->
-		<!--&lt;!&ndash;</camel:packageScan>&ndash;&gt;-->
-		<!--&lt;!&ndash; <route id="_route1"> <from id="_from1" uri="timer://foo?period=1000" -->
-			<!--/> <setBody id="_setBody1"> <simple>Hello World from camel-contex.xml</simple> -->
-			<!--</setBody> <log id="_log1" message=">>> ${body}" /> </route> &ndash;&gt;-->
-	<!--</camelContext>-->
-
-	<!--<camelContext id="samplecxf-spring-boot" xmlns="http://camel.apache.org/schema/spring">-->
-		<!--<routeBuilder ref="order_route"/>-->
-	<!--</camelContext>-->
 </beans>
